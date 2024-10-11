@@ -17,7 +17,6 @@ namespace IT_ProjectManagementApp.Controllers.Models
         public DbSet<Employees> Employees { get; set; }
         public DbSet<Projects> Projects { get; set; }
         public DbSet<Tasks> Tasks { get; set; }
-        public DbSet<EmployeesProjects> EmployeesProjects { get; set; }
     }
 
 }

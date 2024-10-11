@@ -13,9 +13,12 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [Required]
         [StringLength(50)]
         public string ProjectName { get; set; }
-
         [Required]
         [StringLength(50)]
         public string ProjectStatus { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string ProjectDesc { get; set; }
     }
 }
