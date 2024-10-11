@@ -9,11 +9,13 @@ namespace IT_ProjectManagementApp.Controllers.Models
     {
         [Key]
         public int ProjectId { get; set; }
+
         [Required]
         [StringLength(50)]
         public string ProjectName { get; set; }
+
         [Required]
         [StringLength(50)]
-        public string Job-Title { get; set; }
+        public string ProjectStatus { get; set; }
     }
 }

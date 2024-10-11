@@ -7,16 +7,17 @@ namespace IT_ProjectManagementApp.Controllers.Models
     {
         [Key]
         public int  EmployeeId { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string Name { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Surname { get; set; }
+        public string EmployeeName { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Job-Title { get; set; }
+        public string EmployeeSurname { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string JobTitle { get; set; }
     }
 }
