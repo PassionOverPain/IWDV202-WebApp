@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace IT_ProjectManagementApp.Controllers.Models
 
 {
-    public class Projects
+    public class Project
     {
         [Key]
         public int ProjectId { get; set; }
@@ -20,5 +20,9 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [Required]
         [StringLength(50)]
         public string ProjectDesc { get; set; }
+
+        public ICollection<AppTask> Tasks { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
     }
 }

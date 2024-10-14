@@ -3,6 +3,7 @@ using IT_ProjectManagementApp.Controllers.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IT_ProjectManagementApp.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241014092123_IDChange")]
+    partial class IDChange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,28 +23,13 @@ namespace IT_ProjectManagementApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("EmployeeProject", b =>
+            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Employees", b =>
                 {
-                    b.Property<int>("EmployeesEmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProjectsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EmployeesEmployeeId", "ProjectsId");
-
-                    b.HasIndex("ProjectsId");
-
-                    b.ToTable("EmployeeProject", (string)null);
-                });
-
-            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Employee", b =>
-                {
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("EmployeeName")
                         .IsRequired()
@@ -59,18 +46,18 @@ namespace IT_ProjectManagementApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("EmployeeId");
+                    b.HasKey("Id");
 
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Project", b =>
+            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Projects", b =>
                 {
-                    b.Property<int>("ProjectsId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectsId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ProjectDesc")
                         .IsRequired()
@@ -87,18 +74,18 @@ namespace IT_ProjectManagementApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("ProjectsId");
+                    b.HasKey("Id");
 
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Task", b =>
+            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Tasks", b =>
                 {
-                    b.Property<int>("TaskId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaskId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ActualTOC")
                         .IsRequired()
@@ -109,9 +96,6 @@ namespace IT_ProjectManagementApp.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("ProjectId")
-                        .HasColumnType("int");
 
                     b.Property<string>("TaskDesc")
                         .IsRequired()
@@ -128,42 +112,9 @@ namespace IT_ProjectManagementApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("TaskId");
-
-                    b.HasIndex("ProjectId");
+                    b.HasKey("Id");
 
                     b.ToTable("Tasks");
-                });
-
-            modelBuilder.Entity("EmployeeProject", b =>
-                {
-                    b.HasOne("IT_ProjectManagementApp.Controllers.Models.Employee", null)
-                        .WithMany()
-                        .HasForeignKey("EmployeesEmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("IT_ProjectManagementApp.Controllers.Models.Project", null)
-                        .WithMany()
-                        .HasForeignKey("ProjectsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Task", b =>
-                {
-                    b.HasOne("IT_ProjectManagementApp.Controllers.Models.Project", "Project")
-                        .WithMany("Tasks")
-                        .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Project");
-                });
-
-            modelBuilder.Entity("IT_ProjectManagementApp.Controllers.Models.Project", b =>
-                {
-                    b.Navigation("Tasks");
                 });
 #pragma warning restore 612, 618
         }

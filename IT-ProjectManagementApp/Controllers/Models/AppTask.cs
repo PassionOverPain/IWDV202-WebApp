@@ -2,8 +2,9 @@
 
 namespace IT_ProjectManagementApp.Controllers.Models
 {
-    public class Tasks
+    public class AppTask
     {
+        //Named AppTask instead of task because of conflict with resreved system keyword "Task"
         [Key]
         public int TaskId { get; set; }
 
@@ -25,5 +26,9 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [Required]
         [StringLength(50)]
         public string ActualTOC { get; set; }
+
+        public int ProjectId { get; set; }
+
+        public Project Project {  get; set; }
     }
 }
