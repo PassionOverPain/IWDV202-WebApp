@@ -20,6 +20,14 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [StringLength(50)]
         public string JobTitle { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Password { get; set; }
+
         public ICollection<Project> Projects { get; set; }
     }
 }
