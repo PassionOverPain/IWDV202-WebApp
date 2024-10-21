@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace IT_ProjectManagementApp.Controllers.Models
 {
@@ -18,17 +19,25 @@ namespace IT_ProjectManagementApp.Controllers.Models
         public DbSet<Project> Projects { get; set; }
         public DbSet<AppTask> Tasks { get; set; }
 
-        //Added this from YT video 🤣
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+          // Relationship: One Employee -> Many AppTasks
+        builder.Entity<AppTask>()
+            .HasOne(t => t.AssignedToEmployee)
+            .WithMany(e => e.Tasks)
+            .HasForeignKey(t => t.AssignedToEmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);  // Optional: Prevent cascade delete
 
+        // Relationship: One Project -> Many AppTasks
+        builder.Entity<AppTask>()
+            .HasOne(t => t.Project)
+            .WithMany(p => p.Tasks)
+            .HasForeignKey(t => t.ProjectId)
+            .OnDelete(DeleteBehavior.Cascade);  // Optional: Allow cascading delete of tasks when project is deleted
 
-            builder.Entity<AppTask>().HasOne(x => x.Project).WithMany(u => u.Tasks).HasForeignKey(x => x.ProjectId).IsRequired();
-            builder.Entity<Employee>().HasMany(x => x.Projects).WithMany(u => u.Employees).UsingEntity(j => j.ToTable("EmployeeProject"));
-            // A Task belongs to a Project
-            // A Project can have many tasks but a task belongs to Only one Project
+        base.OnModelCreating(builder);
 
         }
     }

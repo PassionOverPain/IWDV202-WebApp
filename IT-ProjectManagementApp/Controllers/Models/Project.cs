@@ -21,8 +21,11 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [StringLength(50)]
         public string ProjectDesc { get; set; }
 
-        public ICollection<AppTask> Tasks { get; set; }
+        [Required]
+        public DateTime StartDate { get; set; }
+        [Required]
+        public DateTime EndDate { get; set; }
 
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<AppTask> Tasks { get; set; } = new List<AppTask>(); // Navigation property
     }
 }

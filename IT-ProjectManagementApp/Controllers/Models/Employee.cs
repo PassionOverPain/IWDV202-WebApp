@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 using System.ComponentModel.DataAnnotations;
 namespace IT_ProjectManagementApp.Controllers.Models
@@ -10,11 +11,11 @@ namespace IT_ProjectManagementApp.Controllers.Models
 
         [Required]
         [StringLength(50)]
-        public string EmployeeName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string EmployeeSurname { get; set; }
+        public string Surname { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -28,6 +29,6 @@ namespace IT_ProjectManagementApp.Controllers.Models
         [StringLength(50)]
         public string Password { get; set; }
 
-        public ICollection<Project> Projects { get; set; }
+        public ICollection<AppTask> Tasks { get; set; } = new List<AppTask>(); // Navigation property
     }
 }

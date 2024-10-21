@@ -17,18 +17,20 @@ namespace IT_ProjectManagementApp.Controllers.Models
 
         [Required]
         [StringLength(50)]
-        public string TaskStatus { get; set; }
+        public string TaskStatus { get; set; } = "To Start"; // "To Start", "In Progress", "Complete"
 
         [Required]
-        [StringLength(50)]
-        public string AssignedTOC { get; set; }
+        public DateTime? AssignedTime { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string ActualTOC { get; set; }
-
-        public int ProjectId { get; set; }
-
-        public Project Project {  get; set; }
+        public DateTime? CompletedTime { get; set; }
+        [Required]
+        public int AssignedToEmployeeId { get; set; } // Foreign Key to User
+        [Required]
+        public Employee AssignedToEmployee { get; set; } // Navigation Property
+        [Required]
+        public int ProjectId { get; set; } // Foreign Key to Project
+        [Required]
+        public Project Project { get; set; } // Navigation property to Project
     }
 }

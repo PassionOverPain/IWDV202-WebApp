@@ -1,86 +1,24 @@
 [
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "AddEmployee",
-    "RelativePath": "api/ITWebApp/AddEmployees",
+    "ContainingType": "AdminController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/admin/create-employee",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "employees",
+        "Name": "employee",
         "Type": "IT_ProjectManagementApp.Controllers.Models.Employee",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "AddProject",
-    "RelativePath": "api/ITWebApp/AddProject",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "project",
-        "Type": "IT_ProjectManagementApp.Controllers.Models.Project",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "AddTask",
-    "RelativePath": "api/ITWebApp/AddTask",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "task",
-        "Type": "IT_ProjectManagementApp.Controllers.Models.AppTask",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
+    "ContainingType": "AdminController",
     "Method": "DeleteEmployee",
-    "RelativePath": "api/ITWebApp/DeleteEmployee",
+    "RelativePath": "api/admin/delete-employee/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -88,242 +26,73 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "DeleteProject",
-    "RelativePath": "api/ITWebApp/DeleteProject",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "DeleteTask",
-    "RelativePath": "api/ITWebApp/DeleteTask",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "GetEmployee",
-    "RelativePath": "api/ITWebApp/GetEmployee",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "IT_ProjectManagementApp.Controllers.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
+    "ContainingType": "AdminController",
     "Method": "GetEmployees",
-    "RelativePath": "api/ITWebApp/GetEmployees",
+    "RelativePath": "api/admin/employees",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[IT_ProjectManagementApp.Controllers.Models.Employee, IT-ProjectManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "GetProject",
-    "RelativePath": "api/ITWebApp/GetProject",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "IT_ProjectManagementApp.Controllers.Models.Project",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "GetProjects",
-    "RelativePath": "api/ITWebApp/GetProjects",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[IT_ProjectManagementApp.Controllers.Models.Project, IT-ProjectManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "GetTask",
-    "RelativePath": "api/ITWebApp/GetTask",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "IT_ProjectManagementApp.Controllers.Models.AppTask",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "GetTasks",
-    "RelativePath": "api/ITWebApp/GetTasks",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[IT_ProjectManagementApp.Controllers.Models.AppTask, IT-ProjectManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
+    "ContainingType": "AdminController",
     "Method": "UpdateEmployee",
-    "RelativePath": "api/ITWebApp/UpdateEmployee",
+    "RelativePath": "api/admin/update-employee/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "employees",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedEmployee",
         "Type": "IT_ProjectManagementApp.Controllers.Models.Employee",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "UpdateProject",
-    "RelativePath": "api/ITWebApp/UpdateProject",
-    "HttpMethod": "PUT",
+    "ContainingType": "AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "CreateProject",
+    "RelativePath": "api/projectmanager/create-project",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -333,23 +102,13 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_ProjectManagementApp.Controllers.ITWebAppController",
-    "Method": "UpdateTask",
-    "RelativePath": "api/ITWebApp/UpdateTask",
-    "HttpMethod": "PUT",
+    "ContainingType": "ProjectManagerController",
+    "Method": "CreateTask",
+    "RelativePath": "api/projectmanager/create-task",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -359,17 +118,165 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "DeleteProject",
+    "RelativePath": "api/projectmanager/delete-project/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "DeleteTask",
+    "RelativePath": "api/projectmanager/delete-task/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetProjectById",
+    "RelativePath": "api/projectmanager/get-project/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetProjects",
+    "RelativePath": "api/projectmanager/get-projects",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetTaskById",
+    "RelativePath": "api/projectmanager/get-task/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetTasks",
+    "RelativePath": "api/projectmanager/get-tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetTasksByEmployee",
+    "RelativePath": "api/projectmanager/get-tasks-by-employee/{employeeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "GetTasksByStatus",
+    "RelativePath": "api/projectmanager/get-tasks-by-status/{status}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "UpdateProject",
+    "RelativePath": "api/projectmanager/update-project/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "project",
+        "Type": "IT_ProjectManagementApp.Controllers.Models.Project",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectManagerController",
+    "Method": "UpdateTask",
+    "RelativePath": "api/projectmanager/update-task/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "task",
+        "Type": "IT_ProjectManagementApp.Controllers.Models.AppTask",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "IT_ProjectManagementApp.Controllers.WeatherForecastController",
