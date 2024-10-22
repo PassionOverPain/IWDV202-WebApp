@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+/* src/App.css */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+h2 {
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.container {
+  margin-top: 5rem; /* Space above the container */
+}
+/* src/App.css */
+.position-relative {
+  position: relative;
+}
+/* src/App.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  background-color: #f7f9fc;
+}
+
+.login-form {
+  padding: 20px;
+  border: 2px solid #007bff; /* Light blue border */
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.login-form .form-control {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: fit-content;
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form .btn:hover {
+  background-color: #0056b3;
+}
+
+
