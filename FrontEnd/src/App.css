@@ -33,7 +33,7 @@ body {
 }
 
 h2 {
-  color: #007bff; /* Bootstrap primary color */
+  color: black; /* Bootstrap primary color */
   margin-bottom: 20px; /* Space below the heading */
 }
 
@@ -89,5 +89,3 @@ h2 {
 .login-form .btn:hover {
   background-color: #0056b3;
 }
-
-

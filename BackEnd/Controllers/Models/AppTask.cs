@@ -26,11 +26,11 @@ namespace IT_ProjectManagementApp.Controllers.Models
         public DateTime? CompletedTime { get; set; }
         [Required]
         public int AssignedToEmployeeId { get; set; } // Foreign Key to User
-        [Required]
+       
         public Employee AssignedToEmployee { get; set; } // Navigation Property
         [Required]
         public int ProjectId { get; set; } // Foreign Key to Project
-        [Required]
+        
         public Project Project { get; set; } // Navigation property to Project
     }
 }

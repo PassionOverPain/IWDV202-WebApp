@@ -49,7 +49,6 @@ public class ProjectManagerController : ControllerBase
     {
         var tasks = await _context.Tasks
             .Where(t => t.TaskStatus == status)
-            .Include(t => t.AssignedToEmployee)
             .ToListAsync();
 
         return Ok(tasks);
@@ -91,10 +90,7 @@ public class ProjectManagerController : ControllerBase
     [HttpPut("update-project/{id}")]
     public async Task<IActionResult> UpdateProject(int id, [FromBody] Project project)
     {
-        if (id != project.ProjectId) // Assuming ProjectId is the key
-        {
-            return BadRequest();
-        }
+       
 
         // Check if the project exists
         var existingProject = await _context.Projects.FindAsync(id);
@@ -156,19 +152,25 @@ public class ProjectManagerController : ControllerBase
     [HttpPut("update-task/{id}")]
     public async Task<IActionResult> UpdateTask(int id, [FromBody] AppTask task)
     {
-        if (id != task.TaskId) // Assuming TaskId is the key
-        {
-            return BadRequest();
-        }
+            var existingTask = await _context.Tasks.FindAsync(id);
+            if (existingTask == null)
+            {
+                return NotFound();
+            }
 
-        if (ModelState.IsValid)
-        {
-            _context.Entry(task).State = EntityState.Modified;
+            // Update the properties
+            existingTask.TaskName = task.TaskName;
+            existingTask.TaskStatus = task.TaskStatus;
+            existingTask.TaskDesc = task.TaskDesc;
+            existingTask.AssignedTime = task.AssignedTime;
+            existingTask.CompletedTime = task.CompletedTime;
+            existingTask.AssignedToEmployeeId = task.AssignedToEmployeeId;
+            existingTask.ProjectId = task.ProjectId;
+
+            // Save changes
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Task updated successfully" });
-        }
 
-        return BadRequest(ModelState);
+            return Ok(new { message = "Task updated successfully" });
     }
 
     // Delete a task

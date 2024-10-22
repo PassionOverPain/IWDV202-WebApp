@@ -39,7 +39,11 @@ const Login = () => {
     <Container className="login-container mt-5">
       <Row className="justify-content-center">
         <Col md={6}>
-          <h2 className="text-center">Login</h2>
+          {/* To be Moved Eventually */}
+          <h1>Information Technology Project Management System</h1>{" "}
+          <h2 className="text-center" style={{ color: "#007bff" }}>
+            Login
+          </h2>
           <Form onSubmit={handleSubmit} className="login-form">
             <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
