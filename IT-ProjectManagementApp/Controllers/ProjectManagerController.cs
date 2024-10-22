@@ -91,6 +91,10 @@ public class ProjectManagerController : ControllerBase
     [HttpPut("update-project/{id}")]
     public async Task<IActionResult> UpdateProject(int id, [FromBody] Project project)
     {
+        if (id != project.ProjectId) // Assuming ProjectId is the key
+        {
+            return BadRequest();
+        }
 
         // Check if the project exists
         var existingProject = await _context.Projects.FindAsync(id);
@@ -152,10 +156,10 @@ public class ProjectManagerController : ControllerBase
     [HttpPut("update-task/{id}")]
     public async Task<IActionResult> UpdateTask(int id, [FromBody] AppTask task)
     {
-        //if (id != task.TaskId) // Assuming TaskId is the key
-        //{
-        //    return BadRequest();
-        //}
+        if (id != task.TaskId) // Assuming TaskId is the key
+        {
+            return BadRequest();
+        }
 
         if (ModelState.IsValid)
         {
