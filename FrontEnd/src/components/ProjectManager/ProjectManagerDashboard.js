@@ -12,6 +12,8 @@ const ProjectManagerDashboard = () => {
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [editProject, setEditProject] = useState(null);
   const [editTask, setEditTask] = useState(null);
+  const [searchName, setSearchName] = useState("");
+  const [searchedEmployee, setSearchedEmployee] = useState(null);
   const [newProject, setNewProject] = useState({
     projectName: "",
     projectDesc: "",
@@ -78,11 +80,16 @@ const ProjectManagerDashboard = () => {
   // Fetch tasks by employee ID
   const fetchTasksByEmployee = async (employeeId) => {
     try {
-      const response = await axios.get(
-        `http://localhost:5220/api/projectmanager/get-tasks-by-employee/${employeeId}`
-      );
-      setTasks(response.data);
-      toast.success("Tasks filtered by employee");
+      if (employeeId == "") {
+        fetchTasks();
+        toast.success("Displaying All tasks.");
+      } else {
+        const response = await axios.get(
+          `http://localhost:5220/api/projectmanager/get-tasks-by-employee/${employeeId}`
+        );
+        setTasks(response.data);
+        toast.success("Tasks filtered by employee");
+      }
     } catch (error) {
       console.error(error);
       toast.error("Error fetching tasks by employee");
@@ -90,7 +97,6 @@ const ProjectManagerDashboard = () => {
   };
 
   const fetchTasksByStatus = async (status) => {
-    //  Needs some fixing <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     try {
       if (status == "") {
         fetchTasks();
@@ -105,6 +111,24 @@ const ProjectManagerDashboard = () => {
     } catch (error) {
       console.error(error);
       toast.error("Error fetching tasks by status");
+    }
+  };
+  const handleSearchEmployee = async () => {
+    if (!searchName.trim()) {
+      toast.error("Please enter an employee name to search");
+      return;
+    }
+
+    try {
+      const response = await axios.get(
+        `http://localhost:5220/api/admin/get-employee-by-name?name=${searchName}`
+      );
+      setSearchedEmployee(response.data);
+      document.getElementById(`allEmployees`).style.display = "none";
+      toast.success("Employee found!");
+    } catch (error) {
+      console.error(error);
+      toast.error("Employee not found");
     }
   };
 
@@ -435,6 +459,41 @@ const ProjectManagerDashboard = () => {
       </Table>
 
       <h2>Current Employees</h2>
+      <div className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Search employee by name"
+          value={searchName}
+          onChange={(e) => setSearchName(e.target.value)}
+        />
+        <Button className="mt-2" onClick={handleSearchEmployee}>
+          Search Employee
+        </Button>
+        {searchedEmployee && (
+          <div className="mt-4">
+            <h4>Employee Details:</h4>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Job Title</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{searchedEmployee.name}</td>
+                  <td>{searchedEmployee.surname}</td>
+                  <td>{searchedEmployee.jobTitle}</td>
+                  <td>{searchedEmployee.email}</td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
+        )}
+      </div>
+
       <Table striped bordered hover>
         <thead>
           <tr>

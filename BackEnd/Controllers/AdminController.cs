@@ -62,6 +62,7 @@ public class AdminController : ControllerBase
 
         _context.Employees.Remove(employee);
         await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
 
         return Ok(new { message = "Employee deleted successfully" });
     }
@@ -72,6 +73,15 @@ public class AdminController : ControllerBase
     {
         var employees = await _context.Employees.ToListAsync();
         return Ok(employees);
+    }
+
+    [HttpGet("get-employee-by-name")]
+    public async Task<IActionResult> GetEmployeeByName(string name)
+    {
+        var employee = await _context.Employees
+            .Where(e => e.Name.ToLower() == name.ToLower())
+            .FirstOrDefaultAsync();
+        return Ok(employee);
     }
 }
 
