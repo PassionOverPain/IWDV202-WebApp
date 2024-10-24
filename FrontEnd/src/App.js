@@ -23,6 +23,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Auth/Login"; // Your Login component
 import AdminDashboard from "./components/Admin/AdminDashboard"; // Import AdminDashboard
 import ProjectManagerDashboard from "./components/ProjectManager/ProjectManagerDashboard";
+import TaskManagerDashboard from "./components/TaskManager/TaskManagerDashboard";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 const App = () => {
@@ -37,6 +38,10 @@ const App = () => {
         <Route
           path="/project-manager/dashboard"
           element={<ProjectManagerDashboard />}
+        />
+         <Route
+          path="/task-manager/dashboard"
+          element={<TaskManagerDashboard/>}
         />
       </Routes>
     </Router>

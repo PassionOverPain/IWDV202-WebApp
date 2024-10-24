@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\controllers\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,10 +23,6 @@
       "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\controllers\\models\\apptask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\models\\apptask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\controllers\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\controllers\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|solutionrelative:controllers\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0CEDC62-1886-44C0-A891-2F928ED2DD9F}|IT-ProjectManagementApp.csproj|c:\\users\\s227284240\\desktop\\github-projects\\iwdv202-webapp\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,11 +61,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "Controllers\\Models\\Employee.cs",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\Models\\Project.cs",
               "RelativeDocumentMoniker": "Controllers\\Models\\Project.cs",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppTask.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\Models\\AppTask.cs",
               "RelativeDocumentMoniker": "Controllers\\Models\\AppTask.cs",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -118,20 +118,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "AppDBContext.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\Models\\AppDBContext.cs",
               "RelativeDocumentMoniker": "Controllers\\Models\\AppDBContext.cs",
               "ToolTip": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\Models\\AppDBContext.cs",
               "RelativeToolTip": "Controllers\\Models\\AppDBContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCUAAAAzAAAAAAAAAA==",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T12:06:16.876Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProjectManagerController.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\ProjectManagerController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectManagerController.cs",
@@ -139,12 +140,11 @@
               "RelativeToolTip": "Controllers\\ProjectManagerController.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAA0wE4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:47:07.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T06:47:07.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -152,8 +152,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:00:17.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T07:00:17.86Z"
             },
             {
               "$type": "Document",
@@ -181,13 +180,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\s227284240\\Desktop\\GitHub-Projects\\IWDV202-WebApp\\BackEnd\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAwwEAAAAAqAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAUwEAAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T06:43:55.702Z",
               "EditorCaption": ""

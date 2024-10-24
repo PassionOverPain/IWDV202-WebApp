@@ -27,7 +27,13 @@ const Login = () => {
       toast.success("Login successful!");
       if (email == "s224145312@mandela.ac.za") {
         navigate("/admin/dashboard");
-      } else {
+      } else
+      if(email == "s227284240@mandela.ac.za")
+        {
+          navigate("/task-manager/dashboard");
+        } 
+        else
+      {
         navigate("/project-manager/dashboard");
       }
     } catch (error) {
