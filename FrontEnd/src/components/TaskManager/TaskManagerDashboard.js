@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const TaskManagerDashboard = () => {
-  const [projects, setProjects] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [employees, setEmployees] = useState([]);
   const [showTaskModal, setShowTaskModal] = useState(false);
@@ -19,23 +18,9 @@ const TaskManagerDashboard = () => {
   const employeeId = localStorage.getItem("employeeId");
 
   useEffect(() => {
-    fetchProjects();
     fetchTasks();
     fetchEmployees();
   }, []);
-
-  // Fetch projects from the API
-  const fetchProjects = async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:5220/api/projectmanager/get-projects"
-      );
-      setProjects(response.data);
-    } catch (error) {
-      console.error(error);
-      toast.error("Error fetching projects");
-    }
-  };
 
   // Fetch tasks assigned only to the logged-in employee
   const fetchTasks = async () => {
@@ -50,11 +35,12 @@ const TaskManagerDashboard = () => {
     }
   };
 
+  // Fetch tasks by status
   const fetchTasksByStatus = async (status) => {
     try {
-      if (status == "") {
+      if (status === "") {
         fetchTasks();
-        toast.success("Displaying All tasks.");
+        toast.success("Displaying all tasks.");
       } else {
         const response = await axios.get(
           `http://localhost:5220/api/projectmanager/get-tasks-by-status/${status}`
@@ -68,7 +54,7 @@ const TaskManagerDashboard = () => {
     }
   };
 
-  // Fetch employees for task assignment
+  // Fetch employees for task assignment display
   const fetchEmployees = async () => {
     try {
       const response = await axios.get(
@@ -78,34 +64,6 @@ const TaskManagerDashboard = () => {
     } catch (error) {
       console.error(error);
       toast.error("Error fetching employees");
-    }
-  };
-
-  const handleSaveTask = async () => {
-    if (!newTask.taskStatus) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
-
-    try {
-      if (editTask) {
-        await axios.put(
-          `http://localhost:5220/api/projectmanager/update-task/${editTask.taskId}`,
-          newTask
-        );
-        toast.success("Task updated successfully!");
-      } else {
-        await axios.post(
-          "http://localhost:5220/api/projectmanager/create-task",
-          newTask
-        );
-        toast.success("Task added successfully!");
-      }
-      fetchTasks();
-      handleCloseTaskModal();
-    } catch (error) {
-      console.error(error);
-      toast.error("Error saving task");
     }
   };
 
@@ -139,6 +97,29 @@ const TaskManagerDashboard = () => {
     setShowTaskModal(false);
   };
 
+  // Save task changes
+  const handleSaveTask = async () => {
+    if (!newTask.taskStatus) {
+      toast.error("Please select a task status.");
+      return;
+    }
+
+    try {
+      if (editTask) {
+        await axios.put(
+          `http://localhost:5220/api/projectmanager/update-task/${editTask.taskId}`,
+          newTask
+        );
+        toast.success("Task updated successfully!");
+      }
+      fetchTasks();
+      handleCloseTaskModal();
+    } catch (error) {
+      console.error(error);
+      toast.error("Error saving task");
+    }
+  };
+
   // Logout function
   const handleLogout = () => {
     navigate("/"); // Redirect to login page
@@ -155,7 +136,6 @@ const TaskManagerDashboard = () => {
       </Button>
 
       <h6>Filter Tasks by Status</h6>
-      {/* Filter by Task Status */}
       <Form.Select
         className="mb-3"
         onChange={(e) => fetchTasksByStatus(e.target.value)}
@@ -174,7 +154,6 @@ const TaskManagerDashboard = () => {
             <th>Description</th>
             <th>Status</th>
             <th>Assigned Employee</th>
-            <th>Project</th>
             <th>Assigned Time</th>
             <th>Completed Time</th>
             <th>Actions</th>
@@ -196,11 +175,6 @@ const TaskManagerDashboard = () => {
                 }
               </td>
               <td>
-                {projects.find(
-                  (project) => project.projectId === task.projectId
-                )?.projectName || "N/A"}
-              </td>
-              <td>
                 {task.assignedTime
                   ? new Date(task.assignedTime).toLocaleDateString()
                   : "N/A"}
@@ -213,7 +187,6 @@ const TaskManagerDashboard = () => {
               <td>
                 <Button
                   variant="warning"
-                  className="me-2"
                   onClick={() => handleEditTask(task)}
                 >
                   Edit
