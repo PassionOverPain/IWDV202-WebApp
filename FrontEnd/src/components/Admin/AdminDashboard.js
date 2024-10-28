@@ -77,7 +77,6 @@ const AdminDashboard = () => {
     }
   };
 
-  // Open modal for editing
   const handleEdit = (employee) => {
     setEditEmployee(employee);
     setNewEmployee({
@@ -89,8 +88,6 @@ const AdminDashboard = () => {
     });
     setShow(true);
   };
-
-  // Handle close modal
   const handleClose = () => {
     setEditEmployee(null);
     setNewEmployee({

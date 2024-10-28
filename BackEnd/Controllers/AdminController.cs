@@ -43,6 +43,8 @@ public class AdminController : ControllerBase
 
         employee.Name = updatedEmployee.Name;
         employee.Surname = updatedEmployee.Surname;
+        employee.Email = updatedEmployee.Email;
+        employee.Password = updatedEmployee.Password;
         employee.JobTitle = updatedEmployee.JobTitle;
 
         await _context.SaveChangesAsync();
@@ -80,6 +82,14 @@ public class AdminController : ControllerBase
     {
         var employee = await _context.Employees
             .Where(e => e.Name.ToLower() == name.ToLower())
+            .FirstOrDefaultAsync();
+        return Ok(employee);
+    }
+    [HttpGet("get-employee-by-email")]
+    public async Task<IActionResult> GetEmployeeByEmail(string email)
+    {
+        var employee = await _context.Employees
+            .Where(e => e.Email.ToLower() == email.ToLower())
             .FirstOrDefaultAsync();
         return Ok(employee);
     }

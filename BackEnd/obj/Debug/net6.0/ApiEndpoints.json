@@ -43,6 +43,38 @@
   },
   {
     "ContainingType": "AdminController",
+    "Method": "GetEmployeeByEmail",
+    "RelativePath": "api/admin/get-employee-by-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "GetEmployeeByName",
+    "RelativePath": "api/admin/get-employee-by-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
     "Method": "UpdateEmployee",
     "RelativePath": "api/admin/update-employee/{id}",
     "HttpMethod": "PUT",
