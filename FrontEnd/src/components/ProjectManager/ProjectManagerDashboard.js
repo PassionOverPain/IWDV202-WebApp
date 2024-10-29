@@ -293,7 +293,7 @@ const ProjectManagerDashboard = () => {
 
   return (
     <div className="container mt-5">
-      <h2 style={{ color: "black", textAlign: "center" }}>
+      <h2 className="heading">
         Project Manager Dashboard
       </h2>
       <Button variant="danger" className="mb-3" onClick={handleLogout}>
@@ -310,7 +310,7 @@ const ProjectManagerDashboard = () => {
       </Button>
 
       {/* Project Table */}
-      <h3>Projects</h3>
+      <h3 className="heading2">Projects</h3>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -341,14 +341,13 @@ const ProjectManagerDashboard = () => {
                   : "N/A"}
               </td>
               <td>
-                <Button
+                <Button className="btnedit" /*Button classes */
                   variant="warning"
-                  className="me-2"
                   onClick={() => handleEditProject(project)}
                 >
                   Edit
                 </Button>
-                <Button
+                <Button className="btndelete"
                   variant="danger"
                   onClick={() => handleDeleteProject(project.projectId)}
                 >
@@ -361,7 +360,7 @@ const ProjectManagerDashboard = () => {
       </Table>
 
       {/* Task Table */}
-      <h3>Tasks</h3>
+      <h3 className="heading2">Tasks</h3>
       <Button
         variant="primary"
         className="mb-3"
@@ -369,7 +368,7 @@ const ProjectManagerDashboard = () => {
       >
         Add New Task
       </Button>
-      <h6>Filter Tasks by Employee</h6>
+      <h6 className="heading6">Filter Tasks by Employee</h6>
       {/* Filter by Employee */}
       <Form.Select
         className="mb-3"
@@ -382,7 +381,7 @@ const ProjectManagerDashboard = () => {
           </option>
         ))}
       </Form.Select>
-      <h6>Filter Tasks by Status</h6>
+      <h6 className="heading6">Filter Tasks by Status</h6>
       {/* Filter by Task Status */}
       <Form.Select
         className="mb-3"
@@ -458,7 +457,7 @@ const ProjectManagerDashboard = () => {
         </tbody>
       </Table>
 
-      <h2>Current Employees</h2>
+      <h2 className="heading2">Current Employees</h2>
       <div className="mb-3">
         <Form.Control
           type="text"

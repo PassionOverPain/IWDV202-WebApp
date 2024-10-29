@@ -45,7 +45,7 @@ const Login = () => {
         <Col md={6}>
           {/* To be Moved Eventually */}
           <h1>Information Technology Project Management System</h1>{" "}
-          <h2 className="text-center" style={{ color: "#007bff" }}>
+          <h2 className="text-center">
             Login
           </h2>
           <Form onSubmit={handleSubmit} className="login-form">

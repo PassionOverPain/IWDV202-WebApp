@@ -128,14 +128,14 @@ const TaskManagerDashboard = () => {
 
   return (
     <div className="container mt-5">
-      <h2 style={{ color: "black", textAlign: "center" }}>
+      <h2 className="heading">
         Task Management Dashboard
       </h2>
       <Button variant="danger" className="mb-3" onClick={handleLogout}>
         Logout
       </Button>
 
-      <h6>Filter Tasks by Status</h6>
+      <h6 className="heading6">Filter Tasks by Status</h6>
       <Form.Select
         className="mb-3"
         onChange={(e) => fetchTasksByStatus(e.target.value)}

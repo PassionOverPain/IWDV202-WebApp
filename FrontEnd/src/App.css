@@ -29,11 +29,12 @@
 }
 /* src/App.css */
 body {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: blue; /* Light gray background */
+  background-image: url('./Images/bluebackground.webp');
 }
 
 h2 {
-  color: black; /* Bootstrap primary color */
+  color: #082eff; /* Bootstrap primary color */
   margin-bottom: 20px; /* Space below the heading */
 }
 
@@ -52,12 +53,15 @@ h2 {
   align-items: center;
   height: 100vh;
   width: 50vw;
-  background-color: #f7f9fc;
+  background-color: #6bb7f1;
+  border: 2px solid #082eff;
+  border-radius: 8px;
+  
 }
 
 .login-form {
   padding: 20px;
-  border: 2px solid #007bff; /* Light blue border */
+  border: 2px solid #082eff; /* Light blue border */
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,6 +72,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
   width: fit-content;
+  color: #082eff;
 }
 
 .login-form .form-control {
@@ -87,5 +92,29 @@ h2 {
 }
 
 .login-form .btn:hover {
-  background-color: #0056b3;
+  background-color: #3f9fd7;
 }
+
+.heading{
+  color: white;
+  text-align: center;
+}
+
+.heading2{
+  color: white;
+}
+
+.heading6{
+  color: #9de8f2;
+}
+
+.btnedit{
+  background-color:  peru;
+  margin: 10px;
+}
+
+.btndelete{
+  background-color:  purple;
+  margin: 10px;
+}
+

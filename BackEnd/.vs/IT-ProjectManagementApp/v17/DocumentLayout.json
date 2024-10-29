@@ -110,7 +110,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAcwAkAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-11T12:01:47.179Z",
               "IsPinned": true,
@@ -187,8 +187,7 @@
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:43:55.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T06:43:55.702Z"
             },
             {
               "$type": "Document",
