@@ -186,6 +186,7 @@ const TaskManagerDashboard = () => {
               </td>
               <td>
                 <Button
+                  className="btnedit"
                   variant="warning"
                   onClick={() => handleEditTask(task)}
                 >

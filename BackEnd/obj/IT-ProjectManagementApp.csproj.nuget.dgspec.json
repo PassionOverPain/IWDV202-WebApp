@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj": {}
+    "C:\\Users\\juane\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj": {
+    "C:\\Users\\juane\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj",
+        "projectUniqueName": "C:\\Users\\juane\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj",
         "projectName": "IT-ProjectManagementApp",
-        "projectPath": "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj",
-        "packagesPath": "C:\\Users\\Line\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Line\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\obj\\",
+        "projectPath": "C:\\Users\\juane\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\IT-ProjectManagementApp.csproj",
+        "packagesPath": "C:\\Users\\juane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juane\\Desktop\\GitHub Projects\\IWDV202-WebApp\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Line\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\juane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

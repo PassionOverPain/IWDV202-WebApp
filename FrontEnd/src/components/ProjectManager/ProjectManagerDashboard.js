@@ -347,7 +347,7 @@ const ProjectManagerDashboard = () => {
                 >
                   Edit
                 </Button>
-                <Button className="btndelete"
+                <Button
                   variant="danger"
                   onClick={() => handleDeleteProject(project.projectId)}
                 >
@@ -438,9 +438,8 @@ const ProjectManagerDashboard = () => {
                   : "N/A"}
               </td>
               <td>
-                <Button
+                <Button className="btnedit"
                   variant="warning"
-                  className="me-2"
                   onClick={() => handleEditTask(task)}
                 >
                   Edit

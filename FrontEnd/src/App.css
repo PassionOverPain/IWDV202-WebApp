@@ -109,8 +109,9 @@ h2 {
 }
 
 .btnedit{
-  background-color:  peru;
+  background-color: #54dcee ;
   margin: 10px;
+  border-color: #54dcee;
 }
 
 .btndelete{

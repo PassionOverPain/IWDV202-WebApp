@@ -139,7 +139,7 @@ const AdminDashboard = () => {
               <td>
                 <Button
                   variant="warning"
-                  className="me-2"
+                  className="btnedit"
                   onClick={() => handleEdit(employee)}
                 >
                   Edit
